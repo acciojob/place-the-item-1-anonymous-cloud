@@ -1,2 +1,34 @@
+.holder {
+    display: flex;                /* Enables flexbox layout */
+    flex-wrap: wrap;              /* Allows items to wrap onto the next row if necessary */
+    justify-content: space-between; /* Evenly distributes the items, with first and last touching the edges */
+    width: 100%;                  /* Ensures the holder takes up the full width of the screen */
+}
 
-/* Your CSS Code here. */
+.item {
+    flex: 1 1 auto;               /* Allows items to grow and shrink as necessary, but maintain auto width */
+    margin: 0 10px;               /* Adds space between items */
+    box-sizing: border-box;       /* Ensures padding and border are included in the width and height */
+}
+
+/* Remove margin from the first and last items to ensure they touch the screen edges */
+.holder .item:first-child {
+    margin-left: 0;
+	background-color : green;
+	width : 100px;
+	height : 100px;
+}
+
+.holder .item:last-child {
+    margin-right: 0;
+	width : 100px;
+	height : 100px;
+	background-color : blue;
+}
+#item-1 {
+	width : 100px;
+	height : 100px;
+	background-color : red;
+	
+}
+}
